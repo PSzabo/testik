@@ -1,0 +1,59 @@
+{block scripts}
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="http://jslibrary.pavelszabo.cz/montanus.carousel.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+{/block}
+
+{block content}
+
+<div class="welcome">
+  <div class="left">
+    <div class="hp_logo"></div>
+    <div class="aa">Vítejte v e-shopu</div>
+    <h1>RASHMI TEA</h1>
+  </div>
+    
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+  
+  <div class="clr"></div>
+</div>
+
+<div class="clr"></div>
+
+{if count($topprodukty)}
+<div class="topprodukty" id="topprodukty">
+  <div class="inner">
+    <div class="scroll">
+          
+      <div n:foreach="$topprodukty AS $row" class="topprodukt item">
+        <a n:href="Product:default $row['url']" title="{$row['name']}" class="top">          
+          <img width="111" height="65" src="{$row['photo']|image:'product',111,65}" alt="{$row['name']}" />
+          <div class="name">{$row['name']}</div>
+          <div class="price">{$row['price_1']} Kč</div>
+        </a>
+        <a href="" title="" class="koupit">koupit</a>
+      </div>                                   
+    
+    </div>  
+  </div>
+</div>
+{/if}
+
+<div class="clr"></div>
+
+{if count($news)}
+<div class="newss">
+    
+  //isEven() 
+  {foreach $news AS $row}
+  <a href="" title="" class="news">
+    <div class="datum">24.11.2013</div>
+    <div class="name">RASHMI TEA</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,  zur labore et dolore magna aliqua...</p>  
+  </a>
+  {/foreach}
+  
+</div>
+{/if}
+
+{/block}

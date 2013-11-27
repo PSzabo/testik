@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="robots" content="{$robots}" n:ifset="$robots">
+
+	<title>{block title|striptags|upper}Rashmi Tea{/block}</title>
+
+	<link rel="stylesheet" media="screen,projection,tv" href="/styles/styles.min.css">	
+	<link rel="shortcut icon" href="/favicon.ico">
+  
+	{block head}{/block}
+</head>
+
+<body>	
+	<!--<div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>-->
+    
+  <div class="headerlinerep"></div>
+  <div class="headerline"></div>
+  
+  <div class="page">
+    <header>
+      <div class="header">
+      
+        <a href="/" class="logo" title="RASHMI TEA">RASHMI TEA</a>
+        
+        <nav>
+          <ul class="nav">
+            <li><a href="" class="active">Čaje</a></li>
+            <li><a href="">Tabáky</a></li>
+            <li><a href="">O čajích</a></li>
+            <li><a href="">Kontakt</a></li>                                            
+          </ul>
+        </nav>
+        
+        <!--<div class="kosik">1 300 Kč&nbsp;&nbsp;|&nbsp;&nbsp;2 ks</div>-->
+        <a href="" title="" class="kosik">1 300 Kč&nbsp;&nbsp;|&nbsp;&nbsp;2 ks</a>
+        
+        <div class="setyrashmi">
+          <div class="sety">Čajové sety</div>
+          <div class="rashmi">RASHMI TEA</div>
+          <a href="" title="" class="nasenabidka">naše nabídka</a> 
+        </div>          
+        
+      </div>
+    </header>
+    
+    <div class="content">
+    {include #content}
+    </div>
+    
+    <div class="clr"></div>
+    
+    <footer>
+      <div class="footer"> 
+        <div class="left">             
+          <nav>
+            <ul class="nav">
+              <li><a href="" class="active">Čaje</a></li>
+              <li><a href="">Tabáky</a></li>
+              <li><a href="">O čajích</a></li>
+              <li><a href="">Kontakt</a></li>                                            
+            </ul>
+          </nav>
+         </div>         
+         
+         <div class="right">
+         Created by <a target="_blank" href="http://www.pavelszabo.cz/">pavelszabo.cz</a> &amp; <div class="jmbrand">jmbrand</div>
+         </div>      
+      </div>
+    </footer>    
+  </div>
+  
+  <div class="caj"></div>
+  
+
+	{block scripts}{/block}  
+</body>
+</html>

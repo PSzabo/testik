@@ -1,0 +1,18 @@
+{block content}
+<a href="" title="" class="zpet">Zpět na výběr</a>
+
+<div class="cara"></div>
+
+<div class="product">
+  <h1>{$product['name']}</h1>    
+  
+  {!$product['desc']}
+</div>
+
+<div class="productRight">
+{if $product['photo']}<div class="image"><img src="{$product['photo']|image:'product',260,183}" alt="{$product['name']}" width="260" height="183" /></div>{/if}
+
+  <div class="price">Cena: <span>{$product['price_1']} Kč</span></div>
+</div>
+
+{/block}
