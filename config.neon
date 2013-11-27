@@ -1,17 +1,13 @@
 common:
 	parameters:
-
 	php:
 		date.timezone: Europe/Prague
 		# zlib.output_compression: yes
-
 	nette:  
 		application:
 			errorPresenter: Error
-
 		session:
 			expiration: 14 days
-
 		database:
 			default:
 				dsn: "mysql:host=localhost;dbname=rashmitea_cz"
@@ -19,7 +15,6 @@ common:
 				password: gcWwtbmL
 				debugger: true
 				explain: true
-
 	services:
 		authenticator: Authenticator
 		routerFactory: RouterFactory
@@ -30,9 +25,6 @@ common:
 		photogalleryRepository: \PhotogalleryRepository
 		eshopRepository: \EshopRepository		
 		newsRepository: \NewsRepository    
-
 	factories:
-
 production < common:
-
 development < common:
